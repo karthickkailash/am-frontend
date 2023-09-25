@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { unAuth } from "./routes/unauth";
 import { RouteObject } from "./routes/path";
 import UnAuthRoute from "./routes/UnAuthRoute";
