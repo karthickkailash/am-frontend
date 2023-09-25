@@ -15,22 +15,24 @@ import { logo } from "../../components/imagepath";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { validationSchema } from "../../components/formschema";
+import { setLoginToken } from "../../reduxStore/loginSlice";
+import { useDispatch } from "react-redux";
 const Login = () => {
   const {
     register,
-    control,
     handleSubmit,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(validationSchema),
   });
-
+  const dispatch = useDispatch();
   const submitForm = (data) => {
-    data.preventDefault();
     console.log({
       email: data.email,
       password: data.password,
     });
+    dispatch(setLoginToken("123456"));
+    window.location.href = "dashboard";
   };
 
   return (

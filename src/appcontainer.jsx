@@ -1,11 +1,13 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { unAuth } from "./routes/unauth";
 import { RouteObject } from "./routes/path";
 import UnAuthRoute from "./routes/UnAuthRoute";
 import AuthRoute from "./routes/AuthRoute";
 
 const AppContainer = () => {
+  const location = useLocation();
+  useEffect(() => {}, [location.pathname]);
   return (
     <>
       <Routes>
