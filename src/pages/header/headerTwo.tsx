@@ -57,7 +57,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 const useStyles = makeStyles((theme) => ({
   appBar: {
-    height: "55px",
+    // height: "55px",
   },
 }));
 

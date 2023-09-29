@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
   appBar: {
     boxShadow: "none", // Remove the box shadow
     borderBottom: "none", // Remove the bottom border
-    height: "55px",
+    // height: "55px",
   },
 }));
 
