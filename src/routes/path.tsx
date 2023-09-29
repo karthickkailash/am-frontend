@@ -1,4 +1,3 @@
-import React from "react";
 import { dashboardUrl } from "../assets/constants/pageurl";
 import Dashboard from "../pages/dashboard";
 

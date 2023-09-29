@@ -4,6 +4,7 @@ import { unAuth } from "./routes/unauth";
 import { RouteObject } from "./routes/path";
 import UnAuthRoute from "./routes/UnAuthRoute";
 import AuthRoute from "./routes/AuthRoute";
+import HeaderLayout from "./pages/header/headerlayout";
 
 const AppContainer = () => {
   const location = useLocation();
@@ -19,11 +20,13 @@ const AppContainer = () => {
           />
         ))}
         {RouteObject?.map((route) => (
-          <Route
-            key={route?.id}
-            path={route?.path}
-            element={<AuthRoute>{route?.element}</AuthRoute>}
-          />
+          <Route path="" element={<HeaderLayout />}>
+            <Route
+              key={route?.id}
+              path={route?.path}
+              element={<AuthRoute>{route?.element}</AuthRoute>}
+            />
+          </Route>
         ))}
       </Routes>
     </>
