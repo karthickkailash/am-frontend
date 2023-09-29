@@ -1,0 +1,33 @@
+/* Add this CSS to your stylesheets */
+.chart-container {
+  display: flex;
+  align-items: center;
+}
+
+.custom-legend {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px; /* Adjust the margin as needed */
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px; /* Adjust the margin between legend items */
+}
+
+.legend-icon {
+  width: 40px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #8884d8; /* Default background color for legend icons */
+  color: #fff; /* Text color inside the legend icon */
+  font-weight: normal; /*bold*/
+  margin-right: 5px; /* Adjust the margin between the icon and label */
+}
+
+.legend-label {
+  font-size: 16px;
+}
