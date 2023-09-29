@@ -12,7 +12,7 @@ const DashboardCards = () => {
     marginBottom: theme.spacing(3),
   }));
   return (
-    <Grid container xs={12} spacing={2}>
+    <Grid container spacing={2}>
       {[0, 1, 2, 4, 5].map((value) => (
         <Grid key={value} item xs={12} sm={6} md={2.4}>
           <Paper
