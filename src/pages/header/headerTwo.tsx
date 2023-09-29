@@ -12,6 +12,7 @@ import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import AccountCircle from "@mui/icons-material/AccountCircle";
+import { makeStyles } from "@mui/styles";
 import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/MoreVert";
@@ -54,8 +55,14 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     },
   },
 }));
+const useStyles = makeStyles((theme) => ({
+  appBar: {
+    height: "55px",
+  },
+}));
 
 export const HeaderTwo = () => {
+  const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] =
     React.useState<null | HTMLElement>(null);
@@ -156,7 +163,7 @@ export const HeaderTwo = () => {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar position="static" className={classes.appBar}>
         <Toolbar>
           <IconButton
             size="large"
@@ -173,7 +180,7 @@ export const HeaderTwo = () => {
             component="div"
             sx={{ display: { xs: "none", sm: "block" } }}
           >
-            MUI
+            AM
           </Typography>
           <Search>
             <SearchIconWrapper>

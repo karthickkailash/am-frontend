@@ -7,19 +7,23 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
+import Badge from "@mui/material/Badge";
 import Button from "@mui/material/Button";
-import Tooltip from "@mui/material/Tooltip";
+import MailIcon from "@mui/icons-material/Mail";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import { makeStyles } from "@mui/styles";
+import NotificationsIcon from "@mui/icons-material/Notifications";
+import AccountCircle from "@mui/icons-material/AccountCircle";
+import { headerlogo } from "../../components/imagepath";
 const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
-
+const menuId = "primary-search-account-menu";
 const useStyles = makeStyles((theme) => ({
   appBar: {
     boxShadow: "none", // Remove the box shadow
     borderBottom: "none", // Remove the bottom border
+    height: "55px",
   },
 }));
 
@@ -35,9 +39,9 @@ export const HeaderOne = () => {
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElUser(event.currentTarget);
-  };
+  // const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
+  //   setAnchorElUser(event.currentTarget);
+  // };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
@@ -51,7 +55,11 @@ export const HeaderOne = () => {
     <AppBar position="static" className={classes.appBar} color={"transparent"}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+          <img
+            src={headerlogo}
+            alt="Header Logo"
+            style={{ marginRight: 1, width: "45px" }}
+          />
           <Typography
             variant="h6"
             noWrap
@@ -138,11 +146,36 @@ export const HeaderOne = () => {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+            <Box sx={{ display: { xs: "none", md: "flex" } }}>
+              <IconButton
+                size="large"
+                aria-label="show 4 new mails"
+                color="inherit"
+              >
+                <Badge badgeContent={4} color="error">
+                  <MailIcon />
+                </Badge>
               </IconButton>
-            </Tooltip>
+              <IconButton
+                size="large"
+                aria-label="show 17 new notifications"
+                color="inherit"
+              >
+                <Badge badgeContent={17} color="error">
+                  <NotificationsIcon />
+                </Badge>
+              </IconButton>
+              <IconButton
+                size="large"
+                edge="end"
+                aria-label="account of current user"
+                aria-controls={menuId}
+                aria-haspopup="true"
+                color="inherit"
+              >
+                <AccountCircle />
+              </IconButton>
+            </Box>
             <Menu
               sx={{ mt: "45px" }}
               id="menu-appbar"
