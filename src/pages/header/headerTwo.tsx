@@ -163,7 +163,14 @@ export const HeaderTwo = () => {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" className={classes.appBar}>
+      <AppBar
+        position="static"
+        className={classes.appBar}
+        sx={{
+          background: "linear-gradient(to bottom, blue 70%, orange 20%)", // Gradient background
+          boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)", // Add a shadow if desired
+        }}
+      >
         <Toolbar>
           <IconButton
             size="large"
