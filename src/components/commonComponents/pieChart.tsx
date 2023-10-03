@@ -22,17 +22,17 @@ const CustomLegend = ({ payload }) => {
   );
 };
 
-const CPieChart = ({ data }) => {
+const CPieChart = ({ data, paddingAngle = 0, innerRadius = 60 }) => {
   return (
     <div style={{ width: "100%", height: "100%" }} className="chart-container">
       <ResponsiveContainer>
-        <PieChart margin={{ top: 5, right: 55, bottom: 5, left: 45 }}>
+        <PieChart margin={{ top: 5, right: 45, bottom: 5, left: 45 }}>
           <Pie
             dataKey="value"
             data={data}
-            innerRadius={60}
+            innerRadius={innerRadius}
             outerRadius={80}
-            paddingAngle={0}
+            paddingAngle={paddingAngle}
           ></Pie>
           <Tooltip />
           <Legend

@@ -18,16 +18,18 @@
 
 .legend-icon {
   width: 40px;
-  height: 20px;
+  height: 25px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  background-color: #8884d8; /* Default background color for legend icons */
+  justify-content: right;
+  background-color: #e68dd4; /* Default background color for legend icons */
   color: #fff; /* Text color inside the legend icon */
-  font-weight: normal; /*bold*/
+  font-weight: bold; /*bold*/
   margin-right: 5px; /* Adjust the margin between the icon and label */
+  padding-right: 5px;
 }
 
 .legend-label {
   font-size: 16px;
+  font-weight: 20px;
 }
