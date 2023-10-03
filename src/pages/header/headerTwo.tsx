@@ -58,6 +58,8 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 const useStyles = makeStyles((theme) => ({
   appBar: {
     // height: "55px",
+    background:
+      "linear-gradient(to bottom, #000080, #000080 80%, #0000A0 100%)", // Dark blue linear gradient with a more distinct color at the bottom
   },
 }));
 
@@ -163,14 +165,7 @@ export const HeaderTwo = () => {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar
-        position="static"
-        className={classes.appBar}
-        sx={{
-          background: "linear-gradient(to bottom, blue 70%, orange 20%)", // Gradient background
-          boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)", // Add a shadow if desired
-        }}
-      >
+      <AppBar position="static" className={classes.appBar}>
         <Toolbar>
           <IconButton
             size="large"
