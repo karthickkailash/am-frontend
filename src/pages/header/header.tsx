@@ -3,10 +3,10 @@ import { HeaderTwo } from "./headerTwo";
 
 const Header = () => {
   return (
-    <div>
+    <>
       <HeaderOne />
       <HeaderTwo />
-    </div>
+    </>
   );
 };
 

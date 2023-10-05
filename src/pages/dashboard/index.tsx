@@ -10,7 +10,7 @@ const Dashboard = () => {
 
   return (
     <Container maxWidth="xl">
-      <Typography variant="h6" sx={{ mb: 5, paddingTop: 8 }}>
+      <Typography variant="h6" sx={{ mb: 5 }}>
         Dashboard: Monitoring
       </Typography>
       <DashboardCards />
