@@ -13,7 +13,7 @@ const DashboardCharts = () => {
   const machineStatusData = [
     { value: 35, name: "Reboot", fill: "purple" },
     { value: 80, name: "Offline", fill: "#2294a6" },
-    { value: 54, name: "Online", fill: "#e68dd4" },
+    { value: 54, name: "Online", fill: "blue" },
   ];
   const firewallStatusData = [
     { value: 65, name: "Active", fill: "#2cdf41" },
@@ -24,7 +24,7 @@ const DashboardCharts = () => {
   const osTypeData = [
     { value: 65, name: "Windows", color: "purple" },
     { value: 40, name: "Linux", color: "#2294a6" },
-    { value: 54, name: "Mac", color: "#e68dd4" },
+    { value: 54, name: "Mac", color: "blue" },
   ];
   const deviceTypeData = [
     { value: 35, name: "Server", color: "#2cdf41" },
