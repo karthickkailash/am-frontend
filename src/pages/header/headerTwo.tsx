@@ -16,6 +16,9 @@ import { makeStyles } from "@mui/styles";
 import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/MoreVert";
+import HouseSidingIcon from "@mui/icons-material/HouseSiding";
+import SettingsIcon from "@mui/icons-material/Settings";
+import RefreshIcon from "@mui/icons-material/Refresh";
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
   borderRadius: theme.shape.borderRadius,
@@ -59,7 +62,7 @@ const useStyles = makeStyles((theme) => ({
   appBar: {
     // height: "55px",
     background:
-      "linear-gradient(to bottom, #000080, #000080 80%, #0000A0 100%)", // Dark blue linear gradient with a more distinct color at the bottom
+      "linear-gradient(to bottom, #0A0D74, #373AB8 79%, #8C8EE0 100%)", // Dark blue linear gradient with a more distinct color at the bottom
   },
 }));
 
@@ -130,11 +133,32 @@ export const HeaderTwo = () => {
     >
       <MenuItem>
         <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-          <Badge badgeContent={4} color="error">
-            <MailIcon />
+          <Badge>
+            <RefreshIcon />
           </Badge>
         </IconButton>
-        <p>Messages</p>
+
+        <p>Refresh</p>
+      </MenuItem>
+      <MenuItem>
+        <Search>
+          <SearchIconWrapper>
+            <SearchIcon />
+          </SearchIconWrapper>
+          <StyledInputBase
+            placeholder="Search…"
+            inputProps={{ "aria-label": "search" }}
+          />
+        </Search>
+        {/* <IconButton
+          size="large"
+          aria-label="show 17 new notifications"
+          color="inherit"
+        >
+          <Badge badgeContent={17} color="error">
+            <NotificationsIcon />
+          </Badge>
+        </IconButton> */}
       </MenuItem>
       <MenuItem>
         <IconButton
@@ -146,7 +170,6 @@ export const HeaderTwo = () => {
             <NotificationsIcon />
           </Badge>
         </IconButton>
-        <p>Notifications</p>
       </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
@@ -174,25 +197,36 @@ export const HeaderTwo = () => {
             aria-label="open drawer"
             sx={{ mr: 2 }}
           >
-            <MenuIcon />
+            <HouseSidingIcon />
           </IconButton>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ display: { xs: "none", sm: "block" } }}
+          <IconButton
+            size="small"
+            edge="start"
+            color="inherit"
+            aria-label="open drawer"
+            sx={{ mr: 2 }}
           >
-            AM
-          </Typography>
-          <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search…"
-              inputProps={{ "aria-label": "search" }}
-            />
-          </Search>
+            Request
+          </IconButton>
+          <IconButton
+            size="small"
+            edge="start"
+            color="inherit"
+            aria-label="open drawer"
+            sx={{ mr: 2 }}
+          >
+            Solutions
+          </IconButton>
+          <IconButton
+            size="large"
+            edge="start"
+            color="inherit"
+            aria-label="open drawer"
+            sx={{ mr: 2 }}
+          >
+            <SettingsIcon />
+          </IconButton>
+
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
             <IconButton
@@ -200,10 +234,19 @@ export const HeaderTwo = () => {
               aria-label="show 4 new mails"
               color="inherit"
             >
-              <Badge badgeContent={4} color="error">
-                <MailIcon />
+              <Badge>
+                <RefreshIcon />
               </Badge>
             </IconButton>
+            <Search>
+              <SearchIconWrapper>
+                <SearchIcon />
+              </SearchIconWrapper>
+              <StyledInputBase
+                placeholder="Search…"
+                inputProps={{ "aria-label": "search" }}
+              />
+            </Search>
             <IconButton
               size="large"
               aria-label="show 17 new notifications"

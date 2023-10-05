@@ -177,7 +177,7 @@ export const HeaderOne = () => {
             color="inherit"
           >
             <div style={{ display: "flex", alignItems: "center" }}>
-              <span>▼</span>
+              <span style={{ fontSize: "12px" }}>▼</span>
             </div>
           </IconButton>
         </div>
@@ -193,7 +193,7 @@ export const HeaderOne = () => {
             color="inherit"
           >
             <div style={{ display: "flex", alignItems: "center" }}>
-              <span>▼</span>
+              <span style={{ fontSize: "12px" }}>▼</span>
             </div>
           </IconButton>
         </div>
